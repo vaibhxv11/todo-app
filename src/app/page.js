@@ -37,9 +37,9 @@ const HomePage = () => {
       <Navbar />
       <div className="container mx-auto py-8 px-4">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className='md:w-[75%] mx-auto '>
-          <div className=''>
+        <div className="grid grid-cols-1  md:grid-cols-2 gap-8">
+          <div className='md:w-[75%]  mx-auto '>
+          <div className='sm:w-[60%] md:w-[100%]'>
           <div className="flex gap-4 mb-6  ">
               <Card className="flex-1 bg-blue-50 ">
                 <CardContent className="flex flex-col items-center">
@@ -76,20 +76,7 @@ const HomePage = () => {
               />
               <Search className="text-gray-500" size={24} />
             </div>
-            {/* <div className="flex gap-4 mb-6 md:w-[70%]">
-              <Card className="flex-1 bg-blue-50">
-                <CardContent className="flex flex-col items-center">
-                  <h3 className="text-xl font-medium text-blue-800">Upcoming Tasks</h3>
-                  <p className="text-3xl font-bold text-blue-700">{upcomingTasks.length}</p>
-                </CardContent>
-              </Card>
-              <Card className="flex-1 bg-green-50">
-                <CardContent className="flex flex-col items-center">
-                  <h3 className="text-xl font-medium text-green-800">Completed Tasks</h3>
-                  <p className="text-3xl font-bold text-green-700">{completedTasks.length}</p>
-                </CardContent>
-              </Card>
-            </div> */}
+           
             <Card className="p-4 mb-6 bg-white shadow-md rounded-lg md:w-[70%]">
               <CardContent>
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">
