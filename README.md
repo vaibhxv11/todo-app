@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Task Management Application
+This is a Task Management application built using Next.js and ShadCN for UI components. The application allows you to add, update, search, and toggle tasks between completed and pending statuses.
 
-## Getting Started
+Overview
+The Task Management Application is designed to help users keep track of their tasks. It provides functionalities for adding, updating, searching, and toggling tasks. The application uses a JSON file to store tasks and employs server-side routes to handle task management operations.
 
-First, run the development server:
+System Design
+Frontend
+Next.js: A React framework for server-rendered applications.
+ShadCN: UI component library for building stylish interfaces.
+Tailwind CSS: Utility-first CSS framework for styling.
+Lucide React: Icon library used for various icons in the UI.
+Backend
+Node.js: The backend runs on Node.js, with API routes to handle task CRUD operations.
+File System: Tasks are stored in a JSON file located in the public directory.
+Implementation
+Components
+Navbar: A navigation bar that includes links to different sections of the application.
+TaskForm: A form for adding and updating tasks.
+TaskList: A list displaying tasks, with options to mark them as done or pending.
+TaskItem: A component representing each task in the list.
+API Routes
+GET /api/tasks: Fetch all tasks.
+POST /api/tasks: Add a new task.
+PUT /api/tasks: Update an existing task.
+Setting Up and Running the Application
+Prerequisites
+Node.js (v14 or higher)
+npm or yarn
+Installation
+Clone the repository:
 
-```bash
+bash
+Copy code
+git clone https://github.com/your-username/task-management-app.git
+cd task-management-app
+Install dependencies:
+
+bash
+Copy code
+npm install
+# or
+yarn install
+Run the development server:
+
+bash
+Copy code
 npm run dev
 # or
 yarn dev
+Open http://localhost:3000 with your browser to see the result.
+
+Building for Production
+Build the application:
+
+bash
+Copy code
+npm run build
 # or
-pnpm dev
+yarn build
+Start the production server:
+
+bash
+Copy code
+npm start
 # or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+yarn start
+File Structure
+markdown
+Copy code
+/components
+  /ui
+    - button.jsx
+    - card.jsx
+    - input.jsx
+    - textarea.jsx
+  - Navbar.jsx
+  - TaskForm.jsx
+  - TaskList.jsx
+  - TaskItem.jsx
+/pages
+  - api
+    - tasks.js
+  - _app.js
+  - index.js
+/public
+  - tasks.json
+/styles
+  - globals.css
