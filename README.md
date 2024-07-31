@@ -44,8 +44,8 @@ To run this project,
 
 1.Clone the repository:
 ```bash
-git clone https://github.com/your-username/task-management-app.git
-cd task-management-app
+git clone https://github.com/vaibhxv11/todo-appp.git
+cd todo-app
 ```
 2.Install dependencies:
 ```bash
