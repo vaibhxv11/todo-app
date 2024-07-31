@@ -3,21 +3,21 @@
     "id": "1722367666815",
     "title": "OS Assignment",
     "description": "Chapter 1 , Chapter 2",
-    "done": true,
+    "done": false,
     "updatedAt": "2024-07-30T19:27:46.815Z"
   },
   {
     "id": "1722367712517",
     "title": "Update Resume",
     "description": "update skills in resume",
-    "done": false,
+    "done": true,
     "updatedAt": "2024-07-30T19:28:32.517Z"
   },
   {
     "id": "1722368076134",
-    "title": "Read Atomic Habits",
+    "title": "Read Atomic ",
     "description": "Read 10 pages of Atomic Habits",
-    "done": false,
+    "done": true,
     "updatedAt": "2024-07-30T19:34:36.134Z"
   },
   {
@@ -26,5 +26,12 @@
     "description": "Solve 3 Medium Questions on Array",
     "done": false,
     "updatedAt": "2024-07-30T19:35:46.207Z"
+  },
+  {
+    "id": "1722411641276",
+    "title": "Capstone Project",
+    "description": "efgetjtuktu",
+    "done": true,
+    "updatedAt": "2024-07-31T07:40:41.276Z"
   }
 ]

@@ -1,17 +1,30 @@
 
+
 import React, { useState } from 'react';
 import { Card, CardContent } from '../../components/ui/card';
 import { Button } from '../../components/ui/button';
-import { CheckCircle, Circle, ChevronDown, ChevronUp } from 'lucide-react'; // Ensure these icons are used correctly
+import { CheckCircle, Circle, ChevronDown, ChevronUp, Edit3, Save } from 'lucide-react'; // Ensure these icons are used correctly
 
-const TaskList = ({ tasks, toggleTaskDone }) => {
+const TaskList = ({ tasks, toggleTaskDone, updateTaskName }) => {
   const [expandedTasks, setExpandedTasks] = useState({});
+  const [editingTaskId, setEditingTaskId] = useState(null);
+  const [newTitle, setNewTitle] = useState('');
 
   const toggleExpand = (taskId) => {
     setExpandedTasks((prev) => ({
       ...prev,
       [taskId]: !prev[taskId],
-    }));
+    }))
+  };
+
+  const startEditing = (taskId, currentTitle) => {
+    setEditingTaskId(taskId);
+    setNewTitle(currentTitle);
+  };
+
+  const handleSave = (taskId) => {
+    updateTaskName(taskId, newTitle);
+    setEditingTaskId(null);
   };
 
   return (
@@ -25,18 +38,45 @@ const TaskList = ({ tasks, toggleTaskDone }) => {
               <div className="flex items-center justify-between">
                 <CardContent className="flex-1 p-4 bg-gray-100 rounded-lg">
                   <div className="flex justify-between items-center">
-                    <p className="text-gray-900 text-lg">{task.title}</p>
-                    <Button
-                      variant="outline"
-                      onClick={() => toggleExpand(task.id)}
-                      className="ml-4"
-                    >
-                      {expandedTasks[task.id] ? (
-                        <ChevronUp className="text-gray-500" size={20} />
+                    {editingTaskId === task.id ? (
+                      <input
+                        type="text"
+                        value={newTitle}
+                        onChange={(e) => setNewTitle(e.target.value)}
+                        className="text-lg font-semibold text-gray-900 border border-gray-300 rounded p-1"
+                      />
+                    ) : (
+                      <p className="text-gray-900 text-lg">{task.title}</p>
+                    )}
+                    <div className="flex items-center ml-4">
+                      <Button
+                        variant="outline"
+                        onClick={() => toggleExpand(task.id)}
+                      >
+                        {expandedTasks[task.id] ? (
+                          <ChevronUp className="text-gray-500" size={20} />
+                        ) : (
+                          <ChevronDown className="text-gray-500" size={20} />
+                        )}
+                      </Button>
+                      {editingTaskId === task.id ? (
+                        <Button
+                          variant="outline"
+                          onClick={() => handleSave(task.id)}
+                          className="ml-2"
+                        >
+                          <Save className="text-blue-500" size={20} />
+                        </Button>
                       ) : (
-                        <ChevronDown className="text-gray-500" size={20} />
+                        <Button
+                          variant="outline"
+                          onClick={() => startEditing(task.id, task.title)}
+                          className="ml-2"
+                        >
+                          <Edit3 className="text-gray-500" size={20} />
+                        </Button>
                       )}
-                    </Button>
+                    </div>
                   </div>
                   {expandedTasks[task.id] && (
                     <div className="mt-4 text-gray-700">

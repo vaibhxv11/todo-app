@@ -3,7 +3,9 @@
 
 This is a Task Management application built using Next.js and ShadCN for UI components. The application allows you to add, search,and toggle tasks between completed and pending status.
 
+## Application UI :
 
+![image](https://github.com/vaibhavdudhal/WeatherNow/blob/main/wetaher%20app/Images/ui1.png?raw=true)
 
 
 ## System Design
