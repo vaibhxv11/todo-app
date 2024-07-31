@@ -5,7 +5,7 @@ This is a Task Management application built using Next.js and ShadCN for UI comp
 
 ## Application UI :
 
-![image](https://github.com/vaibhavdudhal/WeatherNow/blob/main/wetaher%20app/Images/ui1.png?raw=true)
+![image](https://github.com/vaibhxv11/todo-app/blob/master/public/ui.png)
 
 
 ## System Design
